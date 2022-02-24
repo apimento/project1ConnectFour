@@ -67,15 +67,28 @@ to rotate, move, resize, reproportion, flip, spin, etc. any element, regardless 
 Upon my wonderment at this new tool, I used it to manipulate other elements into positions that more accurately resembled the wireframe.   
 
 # DESIGN CHOICES AND PERSPECTIVE #
-I wanted to create a harmonious screen in which all elements could be seen and accessed without any scrolling. 
-I wanted to include and image of an actual game board, which should match the mental model many users have of playing this game in the physical world. 
-Also in the interest of harmony, I used a palette of blues that are easy to look at, and in a variety of values and warmths. 
-I chose to have the players' tokens have the highest and lowest colour values, in order to differentiate them from each other and any of the other elements on 
-the page. This also allows anyone who may be colourblind or viewing the game on a greyscale screen, the ability to still fully play the game.  
-I chose sound events (which are triggered by various click events and game outcomes) that enhance game play and feel appropriate for their corresponding event. 
+<dl>
+  <dt>Harmony</dt>
+<dd>I wanted to create a harmonious screen in which all elements could be seen and accessed without any scrolling. </dd>
+<dd>I wanted to include and image of an actual game board, which should match the mental model many users have of playing this game in the physical world. </dd>
+<dd>I chose a palette of blues that are easy to look at, and in a variety of values and warmths. </dd>
+</dl>
+
+<dl>
+  <dt>Accesibility</dt> 
+  <dd>I chose to have the players' tokens have the highest and lowest colour values, in order to differentiate them from each other and any of the other elements on the page. This also allows anyone who may be colourblind or viewing the game on a greyscale screen, the ability to still fully play the game.  </dd>
+  <dd>I chose you use big chunky buttons and big clear text to optimize visual accessibility. </dd>
+</dl> 
+
+<dl>
+  <dt>Drama</dt>
+  <dd>I chose sound effects (which are triggered by various click events and game outcomes) that feel appropriate for their corresponding event, while enhancing the 
+drama of the game. </dd>
+</dl>
+
 
 # NEXT STEPS #
-After first deployment, I've realized that the sizing of the game is different that what was previewed for me when working / debugging on VS code. This will have to be adjusted. 
+After first deployment, I've realized that the sizing of the game is different that what was previewed for me when working / debugging on VS code. This will have to be adjusted. For now, the game is best experienced at 67% screen width. 
 In the future, I hope to impliment animations of tokens sliding into their appropriate places (rather than just having the cell change colour) and version
 of the game where the player can play against the CPU. 
 
