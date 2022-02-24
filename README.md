@@ -1,7 +1,7 @@
 # project1ConnectFour 
 #  WELCOME TO CONNECT FOUR #
 
-## [CLICK ME TO PLAY](https://github.com/apimento/project1ConnectFour) ##
+## [CLICK ME TO PLAY](https://apimento.github.io/project1ConnectFour/) ##
 
 <img width="600" alt="Screen Shot 2022-02-24 at 5 05 22 PM" src="https://user-images.githubusercontent.com/98665437/155617838-a7156916-d359-44df-bf61-32dc16a38bfe.png">
 
@@ -49,7 +49,7 @@ game's programming. I now have a stronger understanding of how to create functio
 (in this case the cells surrounding the cell populated by the player (ie- the event target) as opposed to iterating over every cell in the entire board. 
 
 I gave myself the task of replicating my wireframe as closely as possible. This proved to become quite the challenge.
-This is the wireframe: 
+This is the wireframe I created using figma, before beginning development: 
 
 <img width="400" alt="Screen Shot 2022-02-17 at 3 07 29 PM" src="https://user-images.githubusercontent.com/98665437/155620667-adafc9df-6111-4247-9704-4aec966914f8.png">
 
@@ -64,10 +64,18 @@ After creating and placing each other element, I realised that the stands for th
 When it came to it, I began to research how to move elements and then came upon the transform tool (which has now become my FAVORITE), which allows the developer
 to rotate, move, resize, reproportion, flip, spin, etc. any element, regardless of whether or not it has a specific grid placement. 
 
-Upon my wonderment at this new tool, I used it to manipulate my other elements into positions that more accurately resembled the wireframe.  
+Upon my wonderment at this new tool, I used it to manipulate other elements into positions that more accurately resembled the wireframe.   
 
+# DESIGN CHOICES AND PERSPECTIVE #
+I wanted to create a harmonious screen in which all elements could be seen and accessed without any scrolling. 
+I wanted to include and image of an actual game board, which should match the mental model many users have of playing this game in the physical world. 
+Also in the interest of harmony, I used a palette of blues that are easy to look at, and in a variety of values and warmths. 
+I chose to have the players' tokens have the highest and lowest colour values, in order to differentiate them from each other and any of the other elements on 
+the page. This also allows anyone who may be colourblind or viewing the game on a greyscale screen, the ability to still fully play the game.  
+I chose sound events (which are triggered by various click events and game outcomes) that enhance game play and feel appropriate for their corresponding event. 
 
 # NEXT STEPS #
+After first deployment, I've realized that the sizing of the game is different that what was previewed for me when working / debugging on VS code. This will have to be adjusted. 
 In the future, I hope to impliment animations of tokens sliding into their appropriate places (rather than just having the cell change colour) and version
 of the game where the player can play against the CPU. 
 
@@ -76,7 +84,7 @@ of the game where the player can play against the CPU.
 # CONTACT #
 Feel free to contact me at: 
 apimento92@gmail.com 
-or on linkedIn at https://www.linkedin.com/in/andrew-pimento-090080202/ 
+or on [linkedIn](https://www.linkedin.com/in/andrew-pimento-090080202/) 
 
 Thanks for taking the time to visit my page! 
 Andrew 
