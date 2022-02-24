@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, intial-scale=1.0"> 
     <title>Connect-four</title> 
     <link rel="stylesheet" href="style.css"> 
-    <script defer src="script.js"> </script>
+    <script defer src="script.js"> </script> 
 </head>
 
  <body>
     
   <div class="container">
      <h1 id="gameTitle">CONNECT FOUR</h1> 
-        <div id="message"><h2 id="winMessage"></h2>  
+     <!--pop-up messages for game outcome-->
+        <div id="winner"> </div><div id="message"><h2>WINS</h2>  
         </div>
 
       <div class="game">
@@ -25,7 +26,7 @@
               <td class="slot"></td> 
               <td class="slot"></td> 
               <td class="slot"></td> 
-              <td class="slot"></td>          
+              <td class="slot"></td>   
            </tr> 
            <tr>
              <td class="slot"></td> 
@@ -34,7 +35,7 @@
              <td class="slot"></td> 
              <td class="slot"></td> 
              <td class="slot"></td> 
-             <td class="slot"></td>          
+             <td class="slot"></td>
           </tr>
           <tr>
              <td class="slot"></td> 
@@ -43,7 +44,16 @@
              <td class="slot"></td> 
              <td class="slot"></td> 
              <td class="slot"></td> 
-             <td class="slot"></td>           
+             <td class="slot"></td>
+          </tr>
+          <tr>
+             <td class="slot"></td> 
+             <td class="slot"></td> 
+             <td class="slot"></td> 
+             <td class="slot"></td> 
+             <td class="slot"></td> 
+             <td class="slot"></td> 
+             <td class="slot"></td>  
           </tr>
           <tr>
              <td class="slot"></td> 
@@ -61,69 +71,42 @@
              <td class="slot"></td> 
              <td class="slot"></td> 
              <td class="slot"></td> 
-             <td class="slot"></td>          
-          </tr>
-          <tr>
-             <td class="slot"></td> 
-             <td class="slot"></td> 
-             <td class="slot"></td> 
-             <td class="slot"></td> 
-             <td class="slot"></td> 
-             <td class="slot"></td> 
-             <td class="slot"></td>           
+             <td class="slot"></td>             
           </tr>
         </table>
-     </div>
+     </div> 
 
-       <!-- The Modals -->
-<!-- <div id="myModal1" class="modal1"></div>
-<div id="myModal2" class="modal2"></div> 
-<div id="myModal3" class="modal3"></div> -->
-
-
-  <!-- Modal: p1 wins -->
-  <!-- <div class="modal-content1">
-    <span class="close">&times;</span>
-    <p id="modalMessage1">textetxtstas</p>
-  </div>  -->
-
-   <!-- Modal: p2 wins -->
-    <!-- <div class="modal-content2">
-      <span class="close">&times;</span>
-      <p id="modalMessage2">textetxtstas</p>
-    </div> -->
-
-  <!-- Modal:tie -->
-   <!-- <div class="modal-content3">
-        <span class="close">&times;</span>
-        <p id="modalMessage3">textetxtstas</p>
-    </div> -->
-
-
-
-
-<!-- </div> -->
+     <!--audio clips-->
+     <audio id="clickAudio">
+       <source src="Bamboo.wav" type="audio/wav">
+     </audio>  
      
-       <!-- <div id="stand1">
-        </div> 
-       <div id="stand2">
-        </div> 
-       <div id="stand3">
-        </div> 
-       <div id="stand4">
-        </div>  
+    <audio id="resetAudio"> 
+      <source src="Ensoniq-VFX-SD-Ride-Cymbal.wav" type="audio/wav">
+    </audio>
 
-       <div id="shadow"></div> -->
+     <audio id="winAudio" >
+       <source src="Alesis-Fusion-Shakuhachi-C5.wav" type="audio/wav">
+     </audio>
+
+     <audio id="drawAudio">
+       <source src="Ensoniq-SQ-1-Biwa-C4.wav" type="audio/wav">
+     </audio>
 
 
        <h3 class="player-turn">It's your move: </h3>
+       <!--colour tokens-->
        <div id="p1"></div> <div id="p2"></div> 
-       <div class= "active1"> </div>
+       <!--square borders-->
+       <div class= "active1"> </div> 
        <div class= "active2"> </div>
       <button class="reset"> RESET BOARD </button>   
        
-
-    </div>
+       <div id="shadow"> </div>
       
+    <div id="stand1"></div> <div id="stand2"></div><div id="stand3"></div><div id="stand4"></div> 
+
+  </div>
+
   </body>
 </html>

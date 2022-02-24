@@ -1,46 +1,49 @@
-//TO DO: MODAL MESSAGE FOR WINNER 
-//arrange elements according to wireframe
-//CSS: BUILD DESIGN ELEMENTS - stands, shadow 
+/*WISH-LIST:
+PLAYER vs. CPU MODE
+ANIMATIONS FOR CHIPS DROPPING DOWN
+ */ 
 
+
+/* CACHED ELEMENTS */ 
 let tableRow = document.getElementsByTagName(`tr`); 
 let tableCell = document.getElementsByTagName(`td`); 
 let tableSlot = document.querySelector(`.slot`);  
 const playerTurn = document.querySelector(`.player-turn`); 
 const reset = document.querySelector(`.reset`); 
-let modal1 = document.getElementById("myModal1"); 
-let modal2 = document.getElementById("myModal2"); 
-let modal3 = document.getElementById("myModal3"); 
-let span = document.getElementsByClassName("close")[0]; 
-// let modalMessage1 = document.getElementById("modalMessage1"); 
-// let modalMessage2 = document.getElementById("modalMessage2"); 
-// let modalMessage3 = document.getElementById("modalMessage3"); 
 let active1 = document.querySelector(`.active1`);
-let active2 = document.querySelector(`.active2`);
+let active2 = document.querySelector(`.active2`); 
+let winIcon = document.querySelector(`#winner`); 
+let winMessage = document.querySelector(`#message`); 
+let clickAudio = document.querySelector(`#clickAudio`); 
+let resetAudio = document.querySelector(`#resetAudio`); 
+let winAudio = document.querySelector(`#winAudio`); 
+let drawAudio = document.querySelector(`#drawAudio`);
 
-
-for (let i = 0; i < tableCell.length; i++){ 
-    tableCell[i].addEventListener('click', (e) => {
-    console.log(`${e.target.parentElement.rowIndex}, ${e.target.cellIndex}`)
-})
-}
-
-reset.addEventListener("click" , resetBoard);
-
-const player1Color = 'rgb(19, 73, 134)'; 
-const player2Color = 'rgb(225, 229, 247)'; 
+/*VARIABLES*/
+const player1Color = 'rgb(51,82,128)'; 
+const player2Color = 'rgb(223,244,255)'; 
 
 let currentPlayer = 1; 
 
+
+/* LISTENERS (+ const Elements) */
+reset.addEventListener("click" , function(e){ 
+    resetBoard(e)
+    playResetAudio(e)
+});
+
 Array.prototype.forEach.call(tableCell, (cell) =>{ 
     cell.addEventListener('click' , function(e){ 
-        changeColor(e) 
+        cellPopulated(e) 
         toggleCurrentPlayer()
+        playClickAudio(e)
     }); 
     cell.style.backgroundColor = 'rgb(190, 192, 201)'; 
 });
 
 
-function changeColor (e){ 
+/* FUNCTIONS */
+function cellPopulated (e){ 
     let column = e.target.cellIndex; 
     let row = []; 
 
@@ -50,27 +53,28 @@ function changeColor (e){
             if (currentPlayer ===1) { 
                 row[0].style.backgroundColor = player1Color;
                 if (horizontalCheck() || verticalCheck() || diagonalCheck1() || diagonalCheck2()) { 
-                    // modal.style.display = "block";
-                    // modalMessage.innerText = "PLAYER 1 WINS";
-                    console.log("winner!"); 
+                    playWinAudio(e);
+                    winIcon.style.display = "inline-flex";
+                    winIcon.style.backgroundColor = player1Color;
+                    winMessage.style.display = "flex" ;
                 } else if(drawCheck()) { 
-                    //  modal.style.display = "block";
-                    //  modalMessage.innerText= "IT'S A DRAW";
-                     console.log("DRAW")
+                    playDrawAudio(e); 
+                    winMessage.innerText = "DRAW"; 
+                    winMessage.style.display = "flex" ;
                 }else{
-
                 return currentPlayer = 2;
                 }
                 } else {   
                 row[0].style.backgroundColor = player2Color; 
                 if (horizontalCheck() || verticalCheck() || diagonalCheck1() || diagonalCheck2()) { 
-                    // modal.style.display = "block";
-                    // modalMessage.innerText = "PLAYER 2 WINS";
-                    console.log('winner!');
+                    playWinAudio(e);
+                    winIcon.style.display = "inline-flex";
+                    winIcon.style.backgroundColor = player2Color;
+                    winMessage.style.display = "flex" ;
                 }else if(drawCheck()) { 
-                    // modal.style.display = "block";
-                    // modalMessage.innerText= "IT'S A DRAW";
-                    console.log("DRAW")
+                    playDrawAudio(e); 
+                    winMessage.innerText = "DRAW"; 
+                    winMessage.style.display = "flex" ;
                }else{
                 return currentPlayer = 1; 
                }
@@ -86,18 +90,33 @@ function toggleCurrentPlayer () {
         active2.style.display = "none"; 
         active1.style.border = "1px solid black"; 
         active2.style.border = "none";  
-        console.log("string being seen")
     } else { 
         console.log(active2);
         active2.style.display = "block"; 
         active1.style.display = "none"; 
         active2.style.border = "1px solid black"; 
         active1.style.border = "none";  
-        console.log("string being seen")
     }
 }
 
+/* (AUDIO) FUNCTIONS */
+function playClickAudio (e){ 
+    clickAudio.play("Bamboo.wav");
+} 
 
+function playWinAudio (e){ 
+    winAudio.play("Alesis-Fusion-Shakuhachi-C5.wav");
+}
+
+function playResetAudio (e) { 
+    resetAudio.play("Esoniq-VFX-SD-Ride-Cymbal.wav");
+}
+
+function playDrawAudio(e) { 
+    drawAudio.play("Ensoniq-SQ-1-Biwa-C4.wav");
+}
+
+/*(BOARD CHECKING) FUNCTIONS*/
 function colorMatchCheck(one,two,three,four){ 
     return(one == two && one == three && one == four && one !== 'rgb(190, 192, 201)');
 } 
@@ -112,7 +131,6 @@ function horizontalCheck(){
         }
     }
 }; 
-
 
 function verticalCheck(){ 
     for (let col=0; col < 7; col++){ 
@@ -159,14 +177,11 @@ function drawCheck() {
     }
 } ;
 
+/* RESET */
 function resetBoard(){ 
     Array.prototype.forEach.call(tableCell, (cell) =>{ 
         cell.style.backgroundColor = 'rgb(190, 192, 201)'; 
+        winIcon.style.display = "none"; 
+        winMessage.style.display = "none";
     });
 } 
-
-/* TO CLOSE MODAL BOX */ 
-// span.onclick = function() {
-//     modal.style.display = "none";
-//     resetBoard();
-//   }
