@@ -1,7 +1,7 @@
 # project1ConnectFour 
 #  WELCOME TO CONNECT FOUR #
 
-## [CLICK ME TO PLAY](https://apimento.github.io/project1ConnectFour/) ##
+## [CLICK TO PLAY](https://apimento.github.io/project1ConnectFour/) ##
 
 <img width="600" alt="Screen Shot 2022-02-24 at 5 05 22 PM" src="https://user-images.githubusercontent.com/98665437/155617838-a7156916-d359-44df-bf61-32dc16a38bfe.png">
 
