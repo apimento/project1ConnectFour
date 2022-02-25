@@ -71,8 +71,8 @@ Upon my wonderment at this new tool, I used it to manipulate other elements into
 <dl>
   <dt>Harmony</dt>
 <dd>I wanted to create a harmonious screen in which all elements could be seen and accessed without any scrolling. </dd>
-<dd>I wanted to include and image of an actual game board, which should match the mental model many users have of playing this game in the physical world. </dd>
-<dd>I chose a palette of blues that are easy to look at, and in a variety of values and warmths. </dd>
+<dd>I wanted to include and image of an actual game board, which should match the mental model many users have of playing this game in the physical world.</dd>
+<dd>I chose a palette of blues in a variety of values and warmths that feels good to look at. </dd>
 </dl>
 
 <dl>
