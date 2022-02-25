@@ -92,7 +92,9 @@ Upon my wonderment at this new tool, I used it to manipulate other elements into
 After first deployment, I've realized that the sizing of the game is different that what was previewed for me when working / debugging on VS code. This will have to be adjusted. For now, the game is best experienced at 67% screen width. 
 
 In the future, I hope to impliment animations of tokens sliding into their appropriate places (rather than just having the cell change colour) and version
-of the game where the user can play against the CPU. 
+of the game where the user can play against the CPU.  
+
+I will also create a home/landing page using a modal that briefly explains how to play and win the game.
 
 
 
