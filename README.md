@@ -45,8 +45,7 @@ Initially, I had chosen this particular game becasue I thought that it would hav
 who is the current player, etc).  
 
 I was able to find a resource that helped me construct the game's win logic - without that, the logic would have been the most challenging aspect of the
-game's programming. I now have a stronger understanding of how to create functions that iterate over specific elements 
-(in this case the cells surrounding the cell populated by the player (ie- the event target) as opposed to iterating over every cell in the entire board. 
+game's programming. I used the resource also as a tool to help me teach myself the logic. I now have a stronger understanding of how to create functions that iterate around specific elements (in this case the cells surrounding the cell populated by the player (ie- the event target) as opposed to iterating over every cell in the entire board. 
 
 I gave myself the task of replicating my wireframe as closely as possible. This proved to become quite the challenge.
 This is the wireframe I created using figma, before beginning development: 
@@ -55,8 +54,10 @@ This is the wireframe I created using figma, before beginning development:
 
 
 As a UX designer, I wanted to task myself with a scenario that reflected what the development process is like, as a developer, working with a UX team. 
-Through many hours of troubleshooting, playing, and research, I was able to program my game to very closely resemble 
-my wireframe. It was tedious, but art is nothing if not tedious.
+Through many hours of troubleshooting, playing, and research, I was able to program my game to very closely resemble my wireframe. 
+
+It was tedious, but making art is nothing if not tedious.
+
 To make my wireframe become reality, I relied heavily on CSS. I created the divs on HTML, then shaped them, then created a grid and placed each element in its 
 appropriate position. I found that my elements were just slightly off in my grid, but I decided to let it remain that way for the time being. 
 
