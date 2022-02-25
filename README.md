@@ -45,7 +45,7 @@ Initially, I had chosen this particular game becasue I thought that it would hav
 who is the current player, etc).  
 
 I was able to find a resource that helped me construct the game's win logic - without that, the logic would have been the most challenging aspect of the
-game's programming. I used the resource also as a tool to help me teach myself the logic. I now have a stronger understanding of how to create functions that iterate around specific elements (in this case the cells surrounding the cell populated by the player (ie- the event target) as opposed to iterating over every cell in the entire board. 
+game's programming. I used the resource also as a tool to help me teach myself the logic. I now have a stronger understanding of how to create functions that iterate around specific elements (in this case the cells surrounding the cell populated by the player (ie- the event target) like a ripple on the surface of the water as opposed to iterating over every cell in the entire board. 
 
 I gave myself the task of replicating my wireframe as closely as possible. This proved to become quite the challenge.
 This is the wireframe I created using figma, before beginning development: 
