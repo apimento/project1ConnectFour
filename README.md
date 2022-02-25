@@ -7,7 +7,7 @@
 
 
 # OBJECTIVE # 
-The first player to populate four(4) cells in a single line (vertical, horizontal or diagonal) wins. 
+The first player to populate four(4) cells in a single line (vertical, horizontal or diagonal) with their coloured cells wins. 
 
 <img width="300" alt="Screen Shot 2022-02-24 at 5 07 44 PM" src="https://user-images.githubusercontent.com/98665437/155619109-1433e4a3-74ff-4576-82ec-d00f229b5d37.png">
 <img width="300" alt="Screen Shot 2022-02-24 at 5 08 45 PM" src="https://user-images.githubusercontent.com/98665437/155619133-6aae6185-7430-48a5-a2bd-01059f5d4032.png">
