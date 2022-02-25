@@ -82,8 +82,8 @@ Upon my wonderment at this new tool, I used it to manipulate other elements into
 
 <dl>
   <dt>Drama</dt>
-  <dd>I chose sound effects (which are triggered by various click events and game outcomes) that feel appropriate for their corresponding event, while enhancing the 
-drama of the game. </dd>
+  <dd>I chose sound effects (which are triggered by various click events and game outcomes) that feel appropriate for their corresponding event, while enhancing the drama of the game. </dd> 
+  <dd> I chose to develop the game with one fewer column (than in the wireframe) in order to make the game more difficult </dd>
 </dl>
 
 
