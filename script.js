@@ -30,7 +30,7 @@ let currentPlayer = 1;
 reset.addEventListener("click" , function(e){ 
     resetBoard(e)
     playResetAudio(e)
-});
+}); 
 
 Array.prototype.forEach.call(tableCell, (cell) =>{ 
     cell.addEventListener('click' , function(e){ 
